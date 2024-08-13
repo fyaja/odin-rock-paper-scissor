@@ -27,11 +27,11 @@
     function getHumanChoice() {
       let humanChoice = prompt("Choose rock, paper, or scissors!");
       // using while loops to check the valid input.
-      while (!["rock", "paper", "scissors"].includes(humanChoice)) {
-        humanChoice = prompt("Invalid choice! Please choose rock, paper, or scissors:").toLowerCase();
+      while (!["rock", "paper", "scissors"].includes(humanChoice.toLowerCase())) {
+        humanChoice = prompt("Invalid choice! Please choose rock, paper, or scissors:");
       }
 
-      return humanChoice;
+      return humanChoice.toLowerCase();
     }
 
     function playRound(humanChoice, computerChoice) {
@@ -50,10 +50,23 @@
       }
     }
 
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
+    function playGame() {
+      for (let i = 1; i <= 5; i++) {
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+        playRound(humanChoice, computerChoice)
+      }
 
-    playRound(humanChoice, computerChoice)
+      if (humanScore > computerScore) {
+        alert(`You Win! ${humanScore} - ${computerScore}`)
+      } else if (computerScore > humanScore) {
+        alert(`You Lose! ${humanScore} - ${computerScore}`)
+      } else {
+        alert(`Tie ! ${humanScore} - ${computerScore}`)
+      }
+    }
+
+    playGame()
   </script>
 </body>
 
