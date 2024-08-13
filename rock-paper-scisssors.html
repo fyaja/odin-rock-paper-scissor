@@ -9,18 +9,33 @@
 </head>
 
 <body>
-  <h1>Play Rock, Paper, Scissors !</h1>
-  <div class="buttons">
-    <button>
-      <img src="images/rock.jpg" alt="">
-    </button>
-    <button>
-      <img src="images/paper.jpg" alt="">
-    </button>
-    <button>
-      <img src="images/scissors.jpg" alt="">
-    </button>
-  </div>
+  <section class="game">
+    <h1>Play Rock, Paper, Scissors !</h1>
+    <div class="score">
+      <h2 class="player-score">Player: 0</h2>
+      <h2 class="computer-score">Computer: 0</h2>
+    </div>
+    <div class="buttons">
+      <button>
+        <img src="images/rock.jpg" alt="rock">
+      </button>
+      <button>
+        <img src="images/paper.jpg" alt="paper">
+      </button>
+      <button>
+        <img src="images/scissors.jpg" alt="scissors">
+      </button>
+    </div>
+    <div class="result">
+      <h2>Result:</h2>
+      <p>You Lose! Paper beats Rock</p>
+      <div class="result-img">
+        <img src="images/rock.jpg" alt="rock">
+        <span>:</span>
+        <img src="images/paper.jpg" alt="paper">
+      </div>
+    </div>
+  </section>
   <script src="main.js"></script>
 </body>
 
